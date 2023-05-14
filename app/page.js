@@ -4,7 +4,11 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <>
-      <h1>Ini adalah halaman home</h1>
+      <div class="container">
+        <h1 className='text-center'>
+          This is Homepage
+        </h1>
+      </div>
     </>
   )
 }
