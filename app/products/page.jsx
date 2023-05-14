@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import AddProduct from "./addProduct";
+import DeleteProduct from "./deleteProduct";
 
 // > metadata
 export const metadata = {
@@ -91,7 +92,7 @@ const ProductPage = async () => {
                         <td className="text-center">
                           <span className="badge bg-primary">Detail</span>
                           <span className="badge bg-secondary mx-2">Edit</span>
-                          <span className="badge bg-danger">Delete</span>
+                          <DeleteProduct { ...product } />
                         </td>
                       </tr>
                     ))
