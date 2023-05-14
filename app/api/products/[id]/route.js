@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 export const GET = async (request, {params}) => {
   // > parse id from string -> int
   const parseIdToInt = parseInt(params.id);
-  console.info(parseIdToInt, '=> id yang masuk');
+  // console.info(parseIdToInt, '=> id yang masuk');
 
   const product = await prisma.product.findFirst({
     where: {
@@ -19,6 +19,33 @@ export const GET = async (request, {params}) => {
   });
 
   return NextResponse.json(product, {status: 200});
+};
+
+// > Method untuk update data product
+export const PATCH = async (request, {params}) => {
+  // > ambil body data yang dikirimkan
+  const body = await request.json();
+
+  // > parse id from string -> int
+  const parseIdToInt = parseInt(params.id);
+  // console.info(parseIdToInt, '=> id yang masuk');
+
+  const product = await prisma.product.update({
+    where: {
+      id: parseIdToInt
+    },
+    data: {
+      title: body.title,
+      price: body.price,
+      category: body.category,
+      brandId: body.brandId
+    }
+  });
+
+  // console.info(parseIdToInt, '=> id bro');
+  // console.info(product, '=> data bro');
+
+  return NextResponse.json(product, {status: 200})
 };
 
 // > Method untuk delete product
