@@ -4,7 +4,7 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <>
-      <div class="container">
+      <div className="container mt-3">
         <h1 className='text-center'>
           This is Homepage
         </h1>
