@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import AddProduct from "./addProduct";
 
 // > metadata
 export const metadata = {
@@ -35,9 +36,7 @@ const ProductPage = async () => {
         {/* Button Section */}
         <div className="table-products my-2">
           {/* Button Add Products */}
-          <button type="button" className="btn btn-md btn-outline-primary my-3">
-            Add New Product
-          </button>
+          <AddProduct />
 
           {/* List of Products */}
           <div className="card p-2">
