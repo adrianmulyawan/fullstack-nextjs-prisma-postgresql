@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import AddProduct from "./addProduct";
 import DeleteProduct from "./deleteProduct";
+import Link from "next/link";
 
 // > metadata
 export const metadata = {
@@ -91,7 +92,11 @@ const ProductPage = async () => {
                         </td>
                         <td className="text-center">
                           <span className="badge bg-primary">Detail</span>
-                          <span className="badge bg-secondary mx-2">Edit</span>
+                          <div className="mx-2">
+                            <Link href={`/products/update/${product.id}`} className="badge bg-secondary text-decoration-none">
+                              Update
+                            </Link>
+                          </div>
                           <DeleteProduct { ...product } />
                         </td>
                       </tr>
