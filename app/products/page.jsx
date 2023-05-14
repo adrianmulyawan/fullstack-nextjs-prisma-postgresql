@@ -22,10 +22,18 @@ const getAllProducts = async () => {
     }
   });
   return res;
-}
+};
+
+// > method get all data brand from db
+const getBrands = async () => {
+  const res = await prisma.brand.findMany();
+  return res;
+};
 
 const ProductPage = async () => {
+  // > inisialisasi data
   const products = await getAllProducts();
+  const brands = await getBrands();
 
   return (
     <>
@@ -36,7 +44,7 @@ const ProductPage = async () => {
         {/* Button Section */}
         <div className="table-products my-2">
           {/* Button Add Products */}
-          <AddProduct />
+          <AddProduct brands={ brands } />
 
           {/* List of Products */}
           <div className="card p-2">
