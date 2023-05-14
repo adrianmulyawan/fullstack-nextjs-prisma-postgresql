@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import axios from 'axios';
 
 // > config swr
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -33,7 +34,7 @@ const UpdateProduct = ({ params }) => {
       setTitle(data.title);
       setPrice(data.price);
       setCategory(data.category);
-      setChooseBrand(data.Brand);
+      setChooseBrand(data.brandId);
     }
   }, [data, error]);
 
@@ -42,23 +43,24 @@ const UpdateProduct = ({ params }) => {
     event.preventDefault();
 
     // > parse to int
-    const parsePrice = parseInt(price);
-    const parseBrandId = parseInt(chooseBrand);
+    const parsePriceInt = parseInt(price);
+    const parseBrandIdInt = parseInt(chooseBrand);
 
-    // > Tampung data
+    // > data
     const updateData = {
       title: title, 
-      price: parsePrice, 
+      price: parsePriceInt, 
       category: category, 
-      brandId: parseBrandId
+      brandId: parseBrandIdInt
     };
 
     // > Test console
-    // console.info(updateData, '=> data yang akan dikirim');
+    console.info(updateData, '=> data yang akan dikirim');
 
     // > Update Data Product
-    
+    await axios.patch(`/api/products/${id}`, updateData);
 
+    // > Direct ke /products
     router.push('/products');
   };
 
