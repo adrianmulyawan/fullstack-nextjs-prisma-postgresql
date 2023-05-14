@@ -21,5 +21,5 @@ export const POST = async (request) => {
     }
   });
 
-  return NextResponse.json(product);
+  return NextResponse.json(product, {status: 201});
 }
