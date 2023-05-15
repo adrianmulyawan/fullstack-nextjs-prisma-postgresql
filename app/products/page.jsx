@@ -91,7 +91,9 @@ const ProductPage = async () => {
                           { product.category }
                         </td>
                         <td className="text-center">
-                          <span className="badge bg-primary">Detail</span>
+                          <Link href={`/products/detail/${product.id}`} className="badge bg-primary text-decoration-none">
+                            Detail
+                          </Link>
                           <div className="mx-2">
                             <Link href={`/products/update/${product.id}`} className="badge bg-secondary text-decoration-none">
                               Update
