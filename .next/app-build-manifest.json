@@ -1,0 +1,50 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/webpack-a2fdbbba1e05dfdc.js",
+      "static/chunks/2443530c-3771ff500bf9a345.js",
+      "static/chunks/139-293003aaf6120d99.js",
+      "static/chunks/main-app-6d266d847c0acbb8.js",
+      "static/css/ef46db3751d8e999.css",
+      "static/chunks/app/page-7a907856e968727b.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-a2fdbbba1e05dfdc.js",
+      "static/chunks/2443530c-3771ff500bf9a345.js",
+      "static/chunks/139-293003aaf6120d99.js",
+      "static/chunks/main-app-6d266d847c0acbb8.js",
+      "static/css/ecd948767e096f78.css",
+      "static/chunks/710-3c8fbef5507d9e25.js",
+      "static/chunks/317-d0f5ac02d2ac2527.js",
+      "static/chunks/app/layout-da494998f17c1a30.js"
+    ],
+    "/products/page": [
+      "static/chunks/webpack-a2fdbbba1e05dfdc.js",
+      "static/chunks/2443530c-3771ff500bf9a345.js",
+      "static/chunks/139-293003aaf6120d99.js",
+      "static/chunks/main-app-6d266d847c0acbb8.js",
+      "static/chunks/710-3c8fbef5507d9e25.js",
+      "static/chunks/964-893baccf8d0f8fa7.js",
+      "static/chunks/app/products/page-5731ac233dcc80ae.js"
+    ],
+    "/products/detail/[id]/page": [
+      "static/chunks/webpack-a2fdbbba1e05dfdc.js",
+      "static/chunks/2443530c-3771ff500bf9a345.js",
+      "static/chunks/139-293003aaf6120d99.js",
+      "static/chunks/main-app-6d266d847c0acbb8.js",
+      "static/chunks/710-3c8fbef5507d9e25.js",
+      "static/chunks/496-abae04c029b683bf.js",
+      "static/chunks/app/products/detail/[id]/page-ad101ea6efe21ecb.js"
+    ],
+    "/products/update/[id]/page": [
+      "static/chunks/webpack-a2fdbbba1e05dfdc.js",
+      "static/chunks/2443530c-3771ff500bf9a345.js",
+      "static/chunks/139-293003aaf6120d99.js",
+      "static/chunks/main-app-6d266d847c0acbb8.js",
+      "static/chunks/710-3c8fbef5507d9e25.js",
+      "static/chunks/964-893baccf8d0f8fa7.js",
+      "static/chunks/496-abae04c029b683bf.js",
+      "static/chunks/app/products/update/[id]/page-d0e40b9b4e07cb67.js"
+    ]
+  }
+}
